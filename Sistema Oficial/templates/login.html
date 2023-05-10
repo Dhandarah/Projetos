@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="/static/img/logo.jpg" width="40px">
+        </div>
+
+        <!-- Menu -->
+        <nav class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Início</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Login e Cadastro -->
+        <div class="auth">
+            <a href="{{ url_for('login') }}" class="auth-item login">
+                <span>Login</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-form">
+            <h2>Login</h2>
+            
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="feedback">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            
+            <form action="/login" method="post">
+                <label for="username">Nome de usuário:</label>
+                <input type="text" name="username" id="username" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" required>
+
+                <input type="submit" value="Entrar">
+            </form>
+            <p>Ainda não é cadastrado? <a href="{{ url_for('cadastro') }}">Cadastre-se aqui!</a></p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sistema de Gestão de Funcionários. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

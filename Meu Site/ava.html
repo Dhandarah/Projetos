@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVA - Ambiente Virtual de Aprendizagem</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+</head>
+<body>
+<header>
+    Ambiente Virtual de Aprendizagem (AVA)
+</header>
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Cursos</a>
+    <a href="#">Fórum</a>
+    <a href="#">Sobre</a>
+</nav>
+<main>
+    <div class="sidebar">
+        <h3>Cursos</h3>
+        <ul>
+            <li><a href="#">Curso 1</a></li>
+            <li><a href="#">Curso 2</a></li>
+            <li><a href="#">Curso 3</a></li>
+            <li><a href="#">Curso 4</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Título da Página</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat sem eu ante pretium ultrices.</p>
+        <p>Suspendisse potenti. Proin congue elit et urna viverra pulvinar. Integer ac aliquam sapien.</p>
+        <img src="URL_DA_IMAGEM" alt="Descrição da imagem">
+    </div>
+</main>
+</body>
+</html>

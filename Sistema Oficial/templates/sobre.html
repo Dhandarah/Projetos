@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Motoristas</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="/static/img/logo.jpg" width="40px">
+        </div>
+
+        <!-- Menu -->
+        <nav class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Início</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login e Cadastro -->
+        <div class="auth">
+            <a href="{{ url_for('login') }}" class="auth-item login">
+                <span>Login</span>
+            </a>
+        </div>
+                
+    </header>
+    <footer>
+        <p>&copy; 2023 Sistema de Gestão de Funcionários. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
